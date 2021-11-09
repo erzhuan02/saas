@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- <meta http-equiv="refresh" content="1800"> -->
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <!-- 以防页面缓存 -->
+  <meta http-equiv="pragram" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <!-- 关闭win10 edge下电话号码打开菜单 -->
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- uc浏览器强制竖屏 -->
+  <!-- <meta name="screen-orientation" content="portrait"> -->
+  <!-- QQ浏览器强制竖屏 -->
+  <!-- <meta name="x5-orientation" content="portrait"> -->
+  <!-- windows phone 点击无高光 -->
+  <meta name="msapplication-tap-highlight" content="no" />
+  <title>六臂云</title>
+  <!-- 收藏夹/标题栏 -->
+  <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon" />
+  <!-- <script src="static/ckplayer/ckplayer.js"></script> -->
+</head>
+
+<body>
+  <div id="box"></div>
+  <script src='https://unpkg.com/axios/dist/axios.min.js'></script>
+  <script src='./dist/index.js'></script>
+  <script>
+    (function () {
+
+      // const data = await video('box').Httpget('getPlayRealTime', { CmrUUId: CrmUUId, SubStream: 0, STime: '', ETime: '' });
+      // console.log(m.http.url('a'));
+      // m.http.post('postPlayHeartbeat', {}).then((data) => {
+      //   console.log(data)
+      // })
+      // console.log(data)
+      video('box').getUp({
+        width: '650',
+        height: '500',
+        isLive: true, // 必须设置，表明是直播视频
+        // src: "http://gcqq450f71eywn6bv7u.exp.bcevod.com/mda-hiup6h1qdymgf3fe/mda-hiup6h1qdymgf3fe.m3u8",
+        image: '', // 预览图
+        // autostart: false, // 是否自动播放
+        controls: true, // 是否显示控制栏
+        volume: 0,// 音量，注：仅当用户同意、网站由用户激活或媒体无声时允许自动播放
+        hls: {
+          num: 5,
+          reconnecttime: 5 // hls直播重连间隔秒数
+        }
+      });
+    })()
+  </script>
+</body>
+
+</html>

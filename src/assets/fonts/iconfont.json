@@ -1,0 +1,72 @@
+{
+  "id": "2262430",
+  "name": "enterprise-cms",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "20342418",
+      "name": "全屏",
+      "font_class": "quanping",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
+      "icon_id": "2767957",
+      "name": "check",
+      "font_class": "check",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "18698704",
+      "name": "icon-refresh",
+      "font_class": "refresh",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "8385562",
+      "name": "icon-right",
+      "font_class": "right",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "14057518",
+      "name": "icon-close",
+      "font_class": "close",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "523020",
+      "name": "play",
+      "font_class": "play",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "4704703",
+      "name": "pause",
+      "font_class": "pause",
+      "unicode": "e8b8",
+      "unicode_decimal": 59576
+    },
+    {
+      "icon_id": "15416758",
+      "name": "volumn--on",
+      "font_class": "volumn-on",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "15416778",
+      "name": "volumn--off",
+      "font_class": "volumn-off",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}

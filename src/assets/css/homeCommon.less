@@ -1,0 +1,194 @@
+// 针对common文件夹中各种公司页面公用的样式
+@import '../color';
+@import './compatibility.less';
+// 在loginIndex文件中引入
+
+// 路由
+.bg {
+  width: 100%;
+  height: calc(100vh - 106px);
+  overflow: auto;
+  background-color: @background;
+  .display-flex();
+  .flex-direction(column);
+  & > div:first-child {
+    min-height: auto;
+    .flex(1);
+    flex-basis: auto; //兼容ie
+    flex-shrink: 0; //兼容edge
+  }
+  .banner {
+    height: 20.5rem;
+    color: #fff;
+    text-align: center;
+    & > div {
+      max-width: 1200px;
+      padding: 0 2rem;
+    }
+    p {
+      font-size: 3.5rem;
+    }
+    span {
+      display: block;
+      font-size: 1.5rem;
+      padding-top: 0.75rem;
+    }
+  }
+  .body {
+    max-width: 1200px;
+    min-height: 450px;
+    margin: 1.5rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    .bodyContent {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  }
+}
+// 成功案例和新闻的tab栏
+.tabsBox {
+  &.body {
+    background-color: @background;
+    padding: 0;
+    // padding: 0 1rem;
+  }
+  // .tabs {
+  .el-tabs__nav {
+    width: 100%;
+  }
+  .el-tabs__header {
+    padding: 0.5rem;
+  }
+  .el-tabs__item {
+    font-size: 16px;
+    text-align: center;
+  }
+  // .list {
+  //   width: 100%;
+  // }
+  .listItem {
+    background: #fff;
+    margin-top: 1rem;
+    padding: 1rem;
+    img {
+      width: 30%;
+      border-radius: 0.4rem;
+    }
+    .infoText {
+      width: 68%;
+      span {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+// 成功案例和新闻详情的模板
+.coDetails {
+  .body .bodyContent {
+    max-width: 810px;
+  }
+  .el-breadcrumb {
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+  .h10 {
+    height: 0.5rem;
+  }
+  .newsContent {
+    text-align: center;
+    h3 {
+      font-size: 24px;
+    }
+    img {
+      display: block;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      width: 100%;
+      height: auto;
+    }
+    .specialImg {
+      width: 520px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    span {
+      font-size: 16px;
+      line-height: 2;
+    }
+    .text {
+      text-align: left;
+      div {
+        text-align: center;
+      }
+    }
+  }
+}
+// 手机移动端
+@media only screen and (max-width: 767px) {
+  // 路由
+  .bg {
+    width: 100%;
+    height: calc(100% - 4.2rem);
+    overflow: auto;
+    background: #fff;
+    .body {
+      // padding: 3rem 2rem;
+      margin: 0 auto;
+      min-height: auto;
+      font-size: 1.3rem;
+    }
+  }
+  // 成功案例和新闻的tab栏详情
+  .tabsBox {
+    &.body {
+      padding: 1.5rem 1rem;
+    }
+    // .tabs {
+    .el-tabs__item {
+      padding: 0;
+      font-size: 1.3rem;
+    }
+    // .list {
+    // }
+    .listItem {
+      margin-top: 0.75rem;
+      img {
+        width: 37%;
+      }
+      .infoText {
+        width: 60%;
+        h3 {
+          font-size: 1.4rem;
+        }
+        span {
+          font-size: 1.2rem;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  // 成功案例和新闻详情的模板
+  .coDetails {
+    .el-breadcrumb {
+      font-size: 1.3rem;
+    }
+    .newsContent {
+      h3 {
+        font-size: 1.5rem;
+      }
+      img {
+        width: 100%;
+      }
+      .specialImg {
+        width: 60%;
+      }
+      span {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

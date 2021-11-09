@@ -1,0 +1,447 @@
+// 此css针对login大首页和注册
+@import '../color.less';
+// 登录
+.program {
+  p {
+    font-size: 40px;
+    color: #000;
+    margin-top: 100px;
+  }
+}
+.plan {
+  width: 100%;
+  margin: 2.5rem 0;
+  .el-carousel {
+    position: relative;
+    width: auto;
+    margin: auto;
+    .el-carousel__item {
+      img {
+        display: block;
+        margin: auto;
+        // width: 100%;
+        height: 100%;
+        // object-fit: cover;
+        // width: auto \0; // 只对ie有效,会有个边框 ie不兼容object-fit
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .intro {
+      position: absolute;
+      &.sjfs,
+      &.ycxd,
+      &.ddjh,
+      &.mdzi,
+      &.kshzs,
+      &.rlsb,
+      &.zhll {
+        top: 33%;
+        left: 7%;
+        .subTitle {
+          width: 50%;
+        }
+      }
+      &.ycxd {
+        p {
+          color: #4a4a4a;
+        }
+      }
+      &.ddjh {
+        p {
+          color: @text2;
+          &.subTitle {
+            color: #fff;
+          }
+        }
+      }
+      &.rlsb {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      p {
+        color: #fff;
+        font-size: 48px;
+        &.subTitle {
+          font-size: 24px;
+          line-height: 1.4;
+          margin-top: 14px;
+        }
+        i {
+          color: @text2;
+          font-style: normal;
+        }
+      }
+      @media screen and (min-width: 1680px) and (max-width: 1900px) {
+        p {
+          font-size: 42px;
+          &.subTitle {
+            font-size: 20px;
+          }
+        }
+      }
+      @media screen and (min-width: 1200px) and (max-width: 1680px) {
+        p {
+          font-size: 32px;
+          &.subTitle {
+            font-size: 16px;
+          }
+        }
+      }
+      @media screen and (max-width: 1200px) {
+        p {
+          font-size: 22px;
+          &.subTitle {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+ul.indicator {
+  // width: auto;
+  // height: 135px;
+  // margin: auto;
+  // padding: 0 8%;
+  li {
+    height: 100px;
+    position: relative;
+    margin: 0.5rem;
+    &.active,
+    &:hover {
+      cursor: pointer;
+      border-bottom: solid 5px #feac4c;
+    }
+    p {
+      position: absolute;
+      top: 35px;
+      right: 4px;
+      color: #fff;
+      font-size: 14px;
+      width: 94px;
+      height: auto;
+      text-align: center;
+    }
+  }
+}
+.caseShare {
+  // 行业应用
+  &.industry {
+    width: auto;
+    height: 465px;
+    margin: auto;
+    background: #fff;
+    p {
+      color: #000;
+    }
+    ul {
+      li {
+        width: 300px;
+        margin: auto;
+        text-align: center;
+        span {
+          display: block;
+          font-size: 22px;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+  // 案例分享
+  height: 647px;
+  background: url('../../assets/images/login/caseShareBg.png') no-repeat center;
+  background-size: 100% 100%;
+  p {
+    color: #fff;
+    font-size: 40px;
+  }
+  ul {
+    margin-top: 45px;
+    max-width: 100%; //成功案例 兼容ie，flex 换方向，侧轴居中flex子项目的会溢出容器
+    li {
+      margin: 20px 20px 0 0;
+    }
+  }
+}
+
+// 注册
+#register {
+  background-color: #fff;
+  height: 100%;
+  .steps {
+    padding: 13px 6%;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .box {
+    width: 100%;
+    min-height: calc(100vh - 106px);
+    margin: auto;
+    background-color: #fff;
+    &.chose {
+      // height: calc(100vh - 106px);
+      height: 100%;
+      button {
+        width: 12rem;
+        &.button2 {
+          margin: 0.625rem 0 0 0;
+        }
+      }
+    }
+  }
+  .regis {
+    .prevStep {
+      height: 50px;
+      line-height: 50px;
+      padding-left: 8%;
+      font-size: 16px;
+      display: block;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+      padding-top: 10px;
+    }
+    .regForm {
+      width: 40%;
+      margin: 50px auto 0;
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        width: 55%;
+      }
+      @media screen and (min-width: 1024px) and (max-width: 1280px) {
+        width: 70%;
+      }
+      @media screen and (min-width: 1280px) and (max-width: 1600px) {
+        width: 45%;
+      }
+      .el-input {
+        width: 100%;
+      }
+      .el-form-item {
+        margin-bottom: 24px;
+      }
+      .next {
+        display: block;
+        width: 120px;
+        margin: auto;
+      }
+      .btnNClick {
+        margin-left: 0;
+      }
+    }
+    .prefix {
+      float: left;
+      width: 35% !important;
+    }
+    .personPhone {
+      float: right;
+      width: 61% !important;
+    }
+    .uploadBox {
+      width: 50%;
+      margin: 26px auto 0;
+      span {
+        margin: 24px auto;
+        display: block;
+        text-align: center;
+        font-size: 0.8rem;
+      }
+      .avatar-uploader {
+        width: 100%;
+        .el-upload {
+          border: 1px dashed @border;
+          border-radius: 6px;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          display: block !important;
+          margin: auto !important;
+        }
+        &:hover {
+          border-color: @text3;
+        }
+        .avatar-uploader-icon {
+          font-size: 28px;
+          color: #8c939d;
+          display: block;
+          width: auto;
+          height: 400px;
+          margin: auto;
+          line-height: 400px;
+          text-align: center;
+          border: dashed 1px #8c939d;
+          border-radius: 5px;
+        }
+        .avatar {
+          width: 100%;
+          height: 400px;
+          display: block;
+        }
+      }
+    }
+    .agree {
+      display: block;
+      margin: 24px auto;
+    }
+    .flexRegis {
+      justify-content: center;
+      padding-bottom: 24px;
+    }
+    .check {
+      text-align: center;
+      display: block;
+      margin-right: 10px;
+      a,
+      span {
+        color: @text3;
+      }
+    }
+    .words {
+      overflow: hidden;
+      margin: 0 auto 24px;
+      max-width: 80%;
+      text-align: center;
+      i {
+        font-size: 66px;
+        color: @success;
+      }
+      span {
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 62px;
+        margin-left: 10px;
+      }
+    }
+    .first {
+      padding: 50px 0;
+      margin-bottom: 0;
+    }
+  }
+  .protocolT {
+    height: 100%;
+    width: 100%;
+  }
+  .protocol {
+    height: calc(100% - 50px);
+    font-size: 14px;
+    line-height: 2;
+    background-color: #fff;
+    h4 {
+      font-size: 14px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  #register {
+    background-color: #fff;
+    .box {
+      height: 100%;
+      min-height: auto;
+      padding-bottom: 30px;
+      background-color: #fff;
+      &.chose {
+        button {
+          width: 70%;
+          font-size: 1.3rem;
+        }
+        button:first-child {
+          margin-bottom: 2rem;
+        }
+      }
+      .regForm {
+        width: 100%;
+        margin: 0;
+        padding: 24px 2rem 0 0.2rem;
+      }
+      .uploadBox {
+        width: 100%;
+        background: #fff;
+        margin: 0;
+        padding: 2rem;
+        .avatar-uploader {
+          width: 9rem;
+          height: 6.5rem;
+          .avatar-uploader-icon {
+            height: 6.5rem;
+            line-height: 6.5rem;
+          }
+          .avatar {
+            width: 9rem;
+            height: 6.5rem;
+          }
+        }
+        .mobTxt {
+          padding-left: 1rem;
+          h3 {
+            font-size: 1.4rem;
+            strong {
+              color: @text2;
+            }
+          }
+          p {
+            width: 80%;
+            font-size: 1.2rem;
+            color: @text5;
+          }
+        }
+      }
+      .words {
+        margin: 0 auto 1rem;
+        font-size: 1.4rem;
+        color: @text6;
+        &.words1 {
+          width: 26.5rem;
+          line-height: 24px;    
+          color: @text5;
+        }
+        i {
+          color: @text2;
+          font-size: 3.3rem;
+        }
+        span {
+          color: @text2;
+          font-size: 1.6rem;
+          line-height: 3.1rem;
+        }
+      }
+      .agreeUp {
+        width: 95%;
+        position: absolute;
+        bottom: 40px;
+        margin: 0;
+      }
+    }
+    .regis {
+      .prevStep {
+        padding-left: 5%;
+      }
+    }
+    .protocolT {
+      width: 100%;
+      padding-bottom: 0;
+    }
+    .protocol {
+      height: 100%;
+    }
+  }
+}
+@media screen and (orientation: landscape) {
+  #register {
+    .box {
+      .flex1 {
+        flex: auto;
+        -webkit-box-flex: auto !important;
+      }
+      .agreeUp {
+        bottom: 10px;
+      }
+    }
+  }
+}

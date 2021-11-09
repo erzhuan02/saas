@@ -1,0 +1,115 @@
+@import '../color';
+// 登陆进去index的布局页
+.homeIndex {
+  height: 100%;
+  .el-header {
+    height: 56px;
+    line-height: 56px;
+    background-color: @main1;
+    overflow: hidden;
+    color: #fff;
+    font-size: 16px;
+    .sysName {
+      & > img {
+        margin-top: 12px;
+      }
+      i {
+        width: 100px;
+        margin-left: 10px;
+        line-height: 56px;
+        text-align: left;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .sysHead {
+      i {
+        font-size: 22px;
+      }
+    }
+  }
+  .el-container {
+    // height: 100%;
+    overflow: auto; //为了火狐的兼容，否则火狐内部有滚动条，flex:1 有问题
+  }
+  .el-aside.indexAside {
+    // height: 100%; 不能写此行，解决谷歌低版本的兼容
+    background-color: @navMenu;
+    position: relative;
+    overflow: visible;
+    padding-bottom: 30px;
+    .el-menu {
+      height: 100%;
+      overflow: auto;
+      overflow-x: hidden;
+      &:not(.el-menu--collapse) {
+        width: 200px;
+      }
+      // 页面scoped，放common里
+      // .el-submenu__title:hover,
+      // .el-menu-item:hover {
+      //   background-color: @navMenuHover !important;
+      // }
+      // .el-menu-item.is-active {
+      //   background-color: @navMenuActive !important;
+      // }
+    } 
+    .collapseBar {
+      width: 10px;
+      height: 180px;
+      line-height: 180px;
+      background-color: @navMenu;
+      border-radius: 0 10px 10px 0;
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translate(0, -50%);
+      z-index: 1;
+      i {
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        position: relative;
+        left: -2px;
+      }
+    }
+    // 底部版本号
+    .ver {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      padding-left: 20px; 
+      line-height: 30px;
+      color: #fff;
+      font-size: 14px;
+      text-align: left;   
+      background: @navMenu;
+    }
+  }
+  .el-main#main {
+    // height: 100%; // 解决谷歌低版本flex:1 子级100%,不能撑满的问题，直接给父级高度
+    height: calc(100vh - 68px); // 加footer的高度为calc(100vh - 108px)
+    margin: 12px 0 0 12px;
+    padding: 0;
+    background-color: #fff;
+    // overflow-x: hidden;
+    & > div:nth-child(1) {
+      // width: 100%;
+      // height: 100%;
+      padding: 0 8px;
+    }
+  }
+  .el-footer {
+    margin-left: 12px;
+    padding: 0;
+    border-top: 2px solid @border1;
+    background-color: #fff;
+    overflow: auto;
+    .company {
+      height: 38px;
+      line-height: 38px;
+      text-align: center;
+    }
+  }
+}
